@@ -1,0 +1,27 @@
+.loggedFiled{
+   background-color: rgb(146, 164, 170);
+    height: 350px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    
+}
+
+.loggedFiled h3 {
+    line-height: 60px;
+    padding-top: 85px;
+}
+
+.logInSection{
+    background-color: #36096d;
+    background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+    margin-top: -10px;
+    height: 600px;
+}
+section.logInSection h1 {
+    text-align: center;
+    padding: 25px;
+    color:  wheat;
+}

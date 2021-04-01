@@ -1,0 +1,16 @@
+.admin-style{
+    background-color: rgb(21, 129, 21);
+    height: 500px;
+    
+    border-right: 5px solid rgb(52, 63, 52);
+}
+.admin-style ul li{
+    list-style: none;
+    color: white;
+    padding-top: 20px;
+    font-weight: 600;   
+}
+
+.bg-color{
+    background-color: rgb(226, 236, 229)
+}
