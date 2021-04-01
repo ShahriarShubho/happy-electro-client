@@ -3,13 +3,15 @@ import { Table } from "react-bootstrap";
 import { useParams } from "react-router";
 import { UserContext } from "../../App";
 import { useForm } from "react-hook-form";
+import swal from 'sweetalert'
 
 const CheckOut = () => {
 
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [loggedInUser] = useContext(UserContext);
   const { id } = useParams();
   const [products, setProducts] = useState([]);
 
+  //this is for read all product
   useEffect(() => {
     fetch("https://pumpkin-sundae-84698.herokuapp.com/products")
       .then((res) => res.json())
@@ -35,7 +37,11 @@ const CheckOut = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Your order success");
+          swal("Well Done!", "Your Order is successful!", "success");
+          document.getElementById("name").value = ""
+          document.getElementById("email").value = ""
+          document.getElementById("address").value = ""
+          document.getElementById("mobile").value = ""
         }
       });
   };
@@ -71,7 +77,9 @@ const CheckOut = () => {
           <br />
           <input
             name="name"
+            id="name"
             className="rounded border-success w-100 "
+            placeholder="Enter your name"
             defaultValue={loggedInUser.name}
             ref={register({ required: true })}
           />{" "}
@@ -85,7 +93,9 @@ const CheckOut = () => {
           <br />
           <input
             name="email"
+            id="email"
             className="rounded border-success w-100"
+            placeholder="Enter your email"
             defaultValue={loggedInUser.email}
             ref={register({ required: true })}
           />
@@ -99,6 +109,7 @@ const CheckOut = () => {
           <br />
           <input
             name="address"
+            id="address"
             className="rounded border-success w-100"
             placeholder="Enter Your Address"
             ref={register({ required: true })}
@@ -113,6 +124,8 @@ const CheckOut = () => {
           <br />
           <input
             name="mobile"
+            type="number"
+            id="mobile"
             className="rounded border-success w-100"
             placeholder="Enter Your Phone Number"
             ref={register({ required: true })}

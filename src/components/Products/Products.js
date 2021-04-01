@@ -1,18 +1,19 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import './Product.css'
 
 const Products = (props) => {
   const { name, price, img, _id} = props.product;
   return (
-    <div className="col-md-4">
-      <Card style={{ width: "15rem", margin: "20px", padding: "10px"}}>
+    <div className="col-lg-4 col-md-6 col-sm-12 my-5">
+      <Card className="cardStyle" style={{ width: "15rem", padding: "10px", }}>
         <Card.Img style={{width: "100%", height: "220px"}} variant="top" src={img}/>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <div className="d-flex justify-content-between">
-            <p>Price : ${price}</p>
-          <Button as={Link} to={"/product/"+_id} variant="primary">Buy Now</Button> 
+            <strong className="mr-1">Price : ${price}</strong>
+          <Button as={Link} to={"/product/"+_id} className="btn-sm" variant="primary">Buy Now</Button> 
           </div>
         </Card.Body>
       </Card>

@@ -5,6 +5,7 @@ import firebaseConfig from "./farebase.confiq";
 import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 import "./LogIn.css";
+import swal from "sweetalert";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -34,7 +35,7 @@ const LogIn = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode, errorMessage);
+        swal(`${errorCode}`, `${errorMessage}`, "error");
       });
   };
 

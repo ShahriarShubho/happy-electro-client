@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Navbar bg="info" expand="lg">
-      <Navbar.Brand className="text-warning font-weight-bold" href="/home">HappyElectro</Navbar.Brand>
+      <Navbar.Brand className="text-warning font-weight-bold h1" href="/home">HappyElectro</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
 

@@ -1,26 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import Products from '../Products/Products';
+import React, { useEffect, useState } from "react";
+import Products from "../Products/Products";
+import './Home.css'
 
 const Home = () => {
-    // const [products, setProducts] = useContext(UserContext)
+  // const [products, setProducts] = useContext(UserContext)
 
-    const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch('https://pumpkin-sundae-84698.herokuapp.com/products')
-        .then(res => res.json())
-        .then(data => setProducts(data))
-    }, [])
-  
-    console.log(products)
-    return (
-        <div className="row">
-        {
-            products.map(pd => <Products product={pd} key={pd._id}></Products>)
-        }
+  useEffect(() => {
+    fetch("https://pumpkin-sundae-84698.herokuapp.com/products")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
 
-        </div>
-    );
+  return (
+    <section className="homeSection">
+      <div className="container">
+          <div className="row">
+        {products.map((pd) => (
+          <Products product={pd} key={pd._id}></Products>
+        ))}
+      </div>
+      </div>
+    </section>
+  );
 };
 
 export default Home;

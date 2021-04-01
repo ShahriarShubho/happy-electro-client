@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
+import swal from "sweetalert";
 
 const ManageProduct = () => {
   
@@ -9,7 +10,7 @@ const ManageProduct = () => {
       fetch("https://pumpkin-sundae-84698.herokuapp.com/products")
         .then((res) => res.json())
         .then((data) => setProducts(data));
-    }, []);
+    }, [products]);
   
     const handleDelete = (id) => {
      
@@ -18,8 +19,8 @@ const ManageProduct = () => {
         })
         .then((res) => res.json())
         .then((data) => {
-            if(data === true){
-                alert("delete successfully")
+            if(data){
+              swal("Good job!", "Delete successful", "success");
             }
         });
   
