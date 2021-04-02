@@ -17,6 +17,15 @@ const Home = () => {
     <section className="homeSection">
       <div className="container">
           <div className="row">
+            {
+              products.length === 0 && 
+                <div className="spinnerStyle  m-auto">
+                <button className="btn btn-primary" type="button" disabled>
+              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
+                </div>
+            }
         {products.map((pd) => (
           <Products product={pd} key={pd._id}></Products>
         ))}

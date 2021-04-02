@@ -5,11 +5,13 @@ import swal from "sweetalert";
 const ManageProduct = () => {
   
     const [products, setProducts] = useState([]);
-
+    const [loadingSpinner, setLoadingSpinner] = useState(true)
     useEffect(() => {
       fetch("https://pumpkin-sundae-84698.herokuapp.com/products")
         .then((res) => res.json())
-        .then((data) => setProducts(data));
+        .then((data) => {
+          setLoadingSpinner(false)
+          setProducts(data)});
     }, [products]);
   
     const handleDelete = (id) => {
@@ -27,7 +29,16 @@ const ManageProduct = () => {
     }
     return (
       <div>
-          <h2 className="text-center p-3">Manage product</h2>
+        {loadingSpinner ? (
+          <div className="text-center m-5">
+              <button className="btn btn-primary" type="button" disabled>
+              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
+            </div>) : 
+
+        (<div>
+        <h2 className="text-center p-3">Manage product</h2>
         <Table responsive="sm" className="text-center" striped bordered hover variant="dark">
           <thead>
             <tr>
@@ -37,7 +48,6 @@ const ManageProduct = () => {
               <th>Action</th>
             </tr>
           </thead>
-          
           {products.map((pd) => (
           <tbody>
             <tr>
@@ -48,6 +58,7 @@ const ManageProduct = () => {
             </tr>  
           </tbody>   ))}
         </Table>
+        </div>)}
       </div>
     );
 };

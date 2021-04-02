@@ -5,6 +5,7 @@ import './Order.css'
 
 const Order = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const[loadingSpinner, setLoadingSpinner] = useState(true)
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     fetch(
@@ -14,6 +15,7 @@ const Order = () => {
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
+        setLoadingSpinner(false)
       });
   }, []);
   return (
@@ -22,8 +24,15 @@ const Order = () => {
 
       <h4 className="pt-4">Hi, {loggedInUser.name}</h4>
       <h5>Your Email: {loggedInUser.email}</h5>
+    { loadingSpinner ? (
+      <div className="mt-5 text-center">
+      <button className="btn btn-primary" type="button" disabled>
+    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Loading...
+  </button>
+  </div>):
 
-      <div className="text-center m-3 bg-white">
+     (<div className="text-center m-3 bg-white">
         <h3>Your total order is : {orders?.length}</h3>
         <Table responsive striped bordered hover size="sm">
           <thead>
@@ -55,7 +64,7 @@ const Order = () => {
           ))}
 
         </Table>
-      </div>
+      </div>)}
     </div>
     </section>
   );

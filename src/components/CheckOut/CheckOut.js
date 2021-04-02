@@ -47,7 +47,7 @@ const CheckOut = () => {
   };
 
   return (
-    <div>
+    <div className="container mt-5">
       <Table className="text-center" striped bordered hover size="sm">
         <thead>
           <tr>
@@ -120,7 +120,7 @@ const CheckOut = () => {
           )}
           <br />
 
-          <strong className="mt-3">Your Phone Number : </strong>
+          <strong className="mt-3">Your Phone Number:</strong>
           <br />
           <input
             name="mobile"
@@ -136,7 +136,7 @@ const CheckOut = () => {
           )}
           <br />
 
-          <button className="btn btn-success mr-5" type="submit">
+          <button className="btn btn-success mb-5 mr-5" type="submit">
             Check Out Order
           </button>
           
