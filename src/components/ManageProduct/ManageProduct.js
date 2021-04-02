@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
+import { Trash, PenFill } from 'react-bootstrap-icons';
 import swal from "sweetalert";
 
 const ManageProduct = () => {
@@ -53,8 +54,11 @@ const ManageProduct = () => {
             <tr>
               <td>{pd?.name}</td>
               <td>1</td>
-              <td>{pd?.price}</td>
-              <td><button className="btn btn-danger btn-sm" onClick={() => handleDelete(pd._id)}>DELETE</button></td>
+              <td>${pd?.price}</td>
+              <td>
+              <button className="btn btn-success mr-2 btn-sm "><PenFill color="white" size={25} /> </button>
+              <button className="btn btn-danger btn-sm" onClick={() => handleDelete(pd._id)}><Trash color="royalblue" size={25} /></button>
+                </td>
             </tr>  
           </tbody>   ))}
         </Table>

@@ -3,7 +3,7 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import "./Admin.css";
 import AddProduct from "../AddProduct/AddProduct";
 import ManageProduct from "../ManageProduct/ManageProduct";
-import { Plus, PencilSquare } from 'react-bootstrap-icons';
+import { Plus, PencilSquare, Grid } from 'react-bootstrap-icons';
 
 const Admin = () => {
   
@@ -18,7 +18,7 @@ const Admin = () => {
               className="text-white text-decoration-none"
               to={`${url}/manageProduct`}
             >
-              Manage Product
+              <Grid className="ml-2" color="white" size={22} /> Manage Product
             </Link>
           </li>
           <li>
@@ -31,7 +31,7 @@ const Admin = () => {
           </li>
           <li>
             <Link className="text-white text-decoration-none" to={`#`}>
-             <PencilSquare color="white" size={21} /> Edit Product
+             <PencilSquare className="ml-2" color="white" size={21} /> Edit Product
             </Link>
           </li>
         </ul>

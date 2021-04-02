@@ -53,7 +53,7 @@ const AddProduct = () => {
   return (
     <>
       <h2 className="text-center p-3">Add product</h2>
-      <div className="bg-white m-auto px-5 py-3 shadow-lg rounded-lg border-lg">
+      <div className="bg-white m-auto px-5 py-3 shadow-lg rounded-lg border-lg w-50">
 
         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -63,7 +63,7 @@ const AddProduct = () => {
             name="name"
             id="name"
             placeholder="Enter Product Name"
-            className="rounded border-primary w-50"
+            className="rounded border-primary w-100"
             ref={register({ required: true })}
           />{" "}
           <br />
@@ -78,7 +78,7 @@ const AddProduct = () => {
             type="number"
             id="price"
             placeholder="Enter Product Price"
-            className="rounded border-primary w-50"
+            className="rounded border-primary w-100"
             ref={register({ required: true })}
           />{" "}
           {errors.price && (

@@ -47,7 +47,7 @@ const LogIn = () => {
       <div className="loggedFiled">
         <h3>LogIn With</h3>
         
-        <button className="btn btn-primary w-75" onClick={handleGoogleSingIn}>
+        <button className="btn btn-primary w-75 btn-sm" onClick={handleGoogleSingIn}>
         <Google className="mr-3" color="green" size={35} /> Continue with Google
         </button>
         <br />

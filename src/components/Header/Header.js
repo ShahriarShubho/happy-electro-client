@@ -21,9 +21,10 @@ const Header = () => {
 
         <Nav className="m-auto">
           <Nav.Link className="font-weight-bold" as={Link} to="/home"> Home</Nav.Link>
-          <Nav.Link className="font-weight-bold" as={Link} to="/orders">Order</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="/order">Orders</Nav.Link>
           <Nav.Link className="font-weight-bold" as={Link} to="/admin">Admin</Nav.Link>
-          <Nav.Link className="font-weight-bold" as={Link} to="/logIn">LogIn</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="#">Deals</Nav.Link>
+          <Button className="btn-success font-weight-bold" as={Link} to="/logIn">LogIn</Button>
         </Nav>
 
         <span className="mr-3">{loggedInUser.name}</span>
