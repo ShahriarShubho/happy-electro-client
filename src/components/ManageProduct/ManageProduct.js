@@ -38,7 +38,7 @@ const ManageProduct = () => {
             </div>) : 
 
         (<div>
-        <h2 className="text-center p-3">Manage product</h2>
+        <h2 className="text-center p-2">Manage product</h2>
         <Table responsive="sm" className="text-center" striped bordered hover variant="dark">
           <thead>
             <tr>
@@ -54,7 +54,7 @@ const ManageProduct = () => {
               <td>{pd?.name}</td>
               <td>1</td>
               <td>{pd?.price}</td>
-              <td><button className="btn btn-warning" onClick={() => handleDelete(pd._id)}>DELETE</button></td>
+              <td><button className="btn btn-danger btn-sm" onClick={() => handleDelete(pd._id)}>DELETE</button></td>
             </tr>  
           </tbody>   ))}
         </Table>

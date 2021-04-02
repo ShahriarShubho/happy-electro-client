@@ -25,3 +25,9 @@ section.logInSection h1 {
     padding: 25px;
     color:  wheat;
 }
+
+@media only screen and (max-width: 470px) {
+    .loggedFiled {
+      width: 90%;   
+    }
+  }

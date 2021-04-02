@@ -20,10 +20,10 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
 
         <Nav className="m-auto">
-          <Nav.Link as={Link} to="/home"> Home</Nav.Link>
-          <Nav.Link as={Link} to="/order">Order</Nav.Link>
-          <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
-          <Nav.Link as={Link} to="/logIn">LogIn</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="/home"> Home</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="/order">Order</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="/admin">Admin</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="/logIn">LogIn</Nav.Link>
         </Nav>
 
         <span className="mr-3">{loggedInUser.name}</span>

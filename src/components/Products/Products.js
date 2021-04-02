@@ -6,7 +6,7 @@ import './Product.css'
 const Products = (props) => {
   const { name, price, img, _id} = props.product;
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12 my-5">
+    <div className="col-lg-4 col-md-6 col-sm-12 my-5 cardResponsive">
       <Card className="cardStyle" style={{ width: "15rem", padding: "10px", }}>
         <Card.Img style={{width: "100%", height: "220px"}} variant="top" src={img}/>
         <Card.Body>
