@@ -3,6 +3,7 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import "./Admin.css";
 import AddProduct from "../AddProduct/AddProduct";
 import ManageProduct from "../ManageProduct/ManageProduct";
+import { Plus, PencilSquare } from 'react-bootstrap-icons';
 
 const Admin = () => {
   
@@ -25,12 +26,12 @@ const Admin = () => {
               className="text-white text-decoration-none"
               to={`${url}/addProduct`}
             >
-              Add Product
+             <Plus color="white" size={35} />Add Product
             </Link>
           </li>
           <li>
             <Link className="text-white text-decoration-none" to={`#`}>
-              Edit Product
+             <PencilSquare color="white" size={21} /> Edit Product
             </Link>
           </li>
         </ul>

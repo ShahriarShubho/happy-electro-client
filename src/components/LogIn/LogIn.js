@@ -6,6 +6,7 @@ import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 import "./LogIn.css";
 import swal from "sweetalert";
+import { Google } from 'react-bootstrap-icons';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -47,7 +48,7 @@ const LogIn = () => {
         <h3>LogIn With</h3>
         
         <button className="btn btn-primary w-75" onClick={handleGoogleSingIn}>
-          Continue with Google
+        <Google className="mr-3" color="green" size={35} /> Continue with Google
         </button>
         <br />
 

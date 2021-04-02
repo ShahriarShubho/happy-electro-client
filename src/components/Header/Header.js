@@ -15,13 +15,13 @@ const Header = () => {
 
   return (
     <Navbar bg="info" expand="lg">
-      <Navbar.Brand className="text-warning font-weight-bold h1" href="/home">HappyElectro</Navbar.Brand>
+      <Navbar.Brand className="text-warning font-weight-bold h1" as={Link} to="/home">HappyElectro</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
 
         <Nav className="m-auto">
           <Nav.Link className="font-weight-bold" as={Link} to="/home"> Home</Nav.Link>
-          <Nav.Link className="font-weight-bold" as={Link} to="/order">Order</Nav.Link>
+          <Nav.Link className="font-weight-bold" as={Link} to="/orders">Order</Nav.Link>
           <Nav.Link className="font-weight-bold" as={Link} to="/admin">Admin</Nav.Link>
           <Nav.Link className="font-weight-bold" as={Link} to="/logIn">LogIn</Nav.Link>
         </Nav>
