@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Product.css";
 import { CartPlus } from "react-bootstrap-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Products = (props) => {
   const { name, price, img, _id } = props.product;
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12 my-5 cardResponsive">
+    <div data-aos="flip-right" className="col-lg-4 col-md-6 col-sm-12 my-5 cardResponsive">
       <Card className="cardStyle" style={{ width: "15rem", padding: "10px" }}>
         <Card.Img
           style={{ width: "100%", height: "220px" }}

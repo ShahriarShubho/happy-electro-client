@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
 import Admin from "./components/Admin/Admin";
 import NotFound from "./components/NotFound/NotFound";
 import CheckOut from "./components/CheckOut/CheckOut";
 import LogIn from "./components/LogIn/LogIn";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Order from "./components/Order/Order";
+import Footer from "./components/Footer/Footer";
+import HomePage from "./components/HomePage/HomePage";
 
 export const UserContext = createContext();
 
@@ -23,7 +24,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/home">
-            <Home />
+            <HomePage/>
           </Route>
           <Route path="/logIn">
             <LogIn />
@@ -35,7 +36,7 @@ function App() {
             <Order />
           </PrivateRoute>
           <Route exact path="/">
-            <Home />
+           <HomePage/>
           </Route>
           <PrivateRoute path="/product/:id">
             <CheckOut />
@@ -44,6 +45,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     </UserContext.Provider>
   );

@@ -1,19 +1,23 @@
-
-Project Name : HappyElectro
-
-In this project I use given the bellow
-
-1. React and React Router
-2. Use mongodb database for store data
-3. use node and express for backend
-4. Bootstrap and React Bootstrap for design
-5. customize design in css
-6. loading spinner add for loading time
-7. this site is responsive for desktop and mobile also tablet
-8. use react form hook for form submission
-9. use icon in Bootstrap icon pack
-10. use firebase for authentication and hosting clint site
-11. use Heroku for server site hosting
+## Wekcome to the repository <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="28px" alt="hi">
 
 
-Here the live site link : https://happy-electro.web.app/
+:mailbox: Let us know about the project!
+
+# HappyElectro
+
+It is an electric product selling website. Which serves electric product user can **buy** product and see only his order. Here are more facilities for a user. They are:
+
+- User can buy product and see only his order.
+- Users and Admin can sign up and log in to this website using google. 
+- Anyone cannot go to some pages without login, which is developed by React Router and firebase authentication
+- Admin see all the order given by user, admin can delete any product and 
+add any product
+
+## Font-End Technology: 
+**HTML5, CSS3, Bootstrap, React Bootstrap, React Bootstrap Icon, React Hook Form, JavaScript, React JS, React Router, Firebase Authentication**
+
+## Back-End Technology:
+**MongoDB NodeJs ExpressJs .env**
+##
+Here live site: [HappyElectro](https://happy-electro.web.app/) <br/>
+You can visit the server site code: [HappyElectro Server GitHub](https://github.com/ShahriarShubho/happy-electro-server)

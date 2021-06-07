@@ -3,7 +3,6 @@ import Products from "../Products/Products";
 import "./Home.css";
 
 const Home = () => {
-  // const [products, setProducts] = useContext(UserContext)
 
   const [products, setProducts] = useState([]);
 
